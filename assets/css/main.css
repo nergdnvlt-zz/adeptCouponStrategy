@@ -1,0 +1,96 @@
+body {
+	font-family: 'Muli', sans-serif !important;
+}
+
+.attr {
+	margin-bottom: 3%;
+}
+
+.bronze {
+	color: #AA6929;
+}
+
+.button-cont {
+	align-items: !important!;
+	display: flex !important;
+	justify-content: center !important;
+	margin-top: 2% !important;
+}
+
+.cont {
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	margin-top: 3%;
+	margin-bottom: 2%;
+}
+
+.display {
+	font-size: 25px;
+}
+
+.form {
+	width: 70% !important;
+}
+
+.gold {
+	color: #9C8024;
+}
+
+.header {
+	border-bottom: 1px #e2e7ea solid;
+	margin-bottom: 1% !important;
+	margin-top: 1% !important;
+}
+
+.outline {
+	border: 1px red dotted;
+}
+
+.prod-card {
+	border: 1px solid #e2e7ea;
+	border-radius: 5px;
+	box-shadow: 1px 1px 6px 1px rgba(0,0,0,0.33);
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: center !important;
+	align-items: center !important;
+	padding-top: 2% !important;
+	padding-bottom: 2% !important;
+}
+
+.prod-cont {
+	width: 80% !important;
+}
+
+.prod-image {
+	max-width: 25%;
+	height: auto;
+}
+
+.prod-title {
+	align-items: center !important;
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: center !important;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.silver {
+	color: #807E86;
+}
+
+button {
+	background-color: #444444 !important;
+	color: white !important;
+	font-size: 15px !important;
+	font-weight: 200 !important;
+}
+
+button:hover {
+	background-color: #666666 !important;
