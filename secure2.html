@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Secure Call Based Coupon</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="assets/css/normalize.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+		<link href="https://fonts.googleapis.com/css2?family=Muli&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/main.css">
+
+
+		<!-- jQuery CDN -->
+		<script
+	  		src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	  		integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+	  		crossorigin="anonymous">
+	  	</script>
+
+		<!-- JS -->
+		<script type="text/javascript" src="assets/js/secure2.js"></script>
+
+		<!-- Initialize SBL -->
+		<script 
+		    id="fsc-api"
+		    src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
+		    type="text/javascript"
+    		data-storefront="mfdemos.test.onfastspring.com/popup-whitelabel"
+    		data-after-markup-callback="dataAfterMarkupCallback"
+		    data-access-key="QELBPKWQQ5OYYMTLBGVQQG"
+		    data-popup-closed="popupClosed"
+		    data-data-callback="dataCallback">
+		</script>
+	</head>
+	<body>
+
+		<!-- INTRO And Explanation -->
+		<div class="header container">
+			<div class="row">
+				<div class="title two-half column">
+					<h1>Demo for Secure Call</h1>
+				</div>
+			</div>
+		</div>
+		<div class="description container">
+			
+			<div class="row">
+				<div class="title two-half column">
+					<p>
+						This demo is to show one way to allow a single coupon code to discount different products by different amounts using the secure call.
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="title two-half column">
+					<h5>
+						Key Points
+					</h5>
+				</div>
+			</div>		
+
+			<div class="row">
+				<div class="title two-half column">
+					<p>
+						<ul>
+							<li>Must collect info to create and account</li>
+							<li>An account must be passed to the session</li>
+							<li>The session will then return a session ID</li>
+							<li>Pass the session ID to the checkout</li>
+							<li>Coupon Code: ALLST | Bronze: $1, Silver: $3, Gold: $5 </li>
+							<li>Coupon Code: STFARM | Bronze: $7, Silver: $15, Gold: $20 </li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+				<!-- FORM -->
+		<div class="cont">
+			<div class="form" id="secure-form">
+				<div class="row">
+					<div class="twelve columns">
+						<label for="coupon">Coupon</label>
+				    	<input class="u-full-width" value="" type="text" placeholder="Coupon" id="secureCouponInput" required>
+				    </div>
+				</div>
+
+			<div class="button-cont">
+					<button onclick="fsSecure();" id="coups">Apply Coupon</button>
+				</div>
+
+
+				<div class="row">
+					<div class="twelve columns">
+						<ul style="list-style-type:none !important;">
+							<li><h6>* Please only click the button once. This is a demo and not based for performance, so it will take approx 10 seconds.</h6></li>
+							<li><h6>* Please reload pages between attempts</h6></li>
+						</ul>
+				    </div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- PRODUCTS -->
+		<div class="cont">
+			<h1>STORE</h1>
+		</div>
+		<div class="cont">
+			<div class="prod-cont row">
+				
+				<div class="first prod-card one-third column">
+					<img class="prod-image attr" data-fsc-item-path="bronze" data-fsc-item-image></img>
+					<span class="attr bronze display" data-fsc-item-path="bronze" data-fsc-item-display></span>
+					<div class="discount-pricing">
+
+						<strike data-fsc-item-path="bronze" data-fsc-item-price  data-fsc-smartdisplay></strike>
+						<span data-fsc-item-path="bronze" data-fsc-item-unitPrice ></span>
+					
+					</div>
+
+
+					<input
+	                    data-fsc-autoapply 
+	                    data-fsc-item-quantity-value 
+	                    data-fsc-item-quantity 
+	                    data-fsc-item-path-value="bronze"
+	                    data-fsc-item-path="bronze" 
+	                    data-fsc-action="Update" 
+	                    type="text" 
+	                    name="quantity" 
+	                    value="1"/>
+
+					<!-- <input type="radio" id="bronze" name="secureProduct" value="bronze" checked> -->
+					<button data-fsc-item-path-value="bronze" data-fsc-action="Add" data-fsc-item-path="bronze" data-fsc-item-selection-smartdisplay-inverse>
+						Add to Cart
+					</button>
+
+					<button data-fsc-item-path-value="bronze" data-fsc-action="Checkout" data-fsc-item-path="bronze" data-fsc-item-selection-smartdisplay>
+						Buy
+					</button>
+
+				</div>
+
+				<div class="prod-card one-third column">
+					<img class="attr prod-image" data-fsc-item-path="silver" data-fsc-item-image></img>
+					<span class="attr silver display" data-fsc-item-path="silver" data-fsc-item-display></span>
+					<div class="discount-pricing">
+						<strike data-fsc-item-path="silver" data-fsc-item-price  data-fsc-smartdisplay></strike>
+						<span data-fsc-item-path="silver" data-fsc-item-unitPrice ></span>
+					</div>
+
+					<input
+	                    data-fsc-autoapply 
+	                    data-fsc-item-quantity-value 
+	                    data-fsc-item-quantity 
+	                    data-fsc-item-path-value="silver"
+	                    data-fsc-item-path="silver" 
+	                    data-fsc-action="Update" 
+	                    type="text" 
+	                    name="quantity" 
+	                    value="1"/>
+					
+					<!-- <input type="radio" id="silver" name="secureProduct" value="silver"> -->
+					<button data-fsc-item-path-value="silver" data-fsc-action="Add" data-fsc-item-path="silver" data-fsc-item-selection-smartdisplay-inverse>
+						Add to Cart
+					</button>
+
+					<button data-fsc-item-path-value="silver" data-fsc-action="Checkout" data-fsc-item-path="silver" data-fsc-item-selection-smartdisplay>
+						Buy
+					</button>
+				</div>
+
+				<div class="prod-card one-third column">
+					<img class="attr prod-image" data-fsc-item-path="gold" data-fsc-item-image></img>
+					<span class="attr gold display" data-fsc-item-path="gold" data-fsc-item-display></span>
+					<div class="discount-pricing">
+						<strike data-fsc-item-path="gold" data-fsc-item-price  data-fsc-smartdisplay></strike>
+						<span data-fsc-item-path="gold" data-fsc-item-unitPrice ></span>
+					</div>
+					
+					<input
+	                    data-fsc-autoapply 
+	                    data-fsc-item-quantity-value 
+	                    data-fsc-item-quantity 
+	                    data-fsc-item-path-value="gold"
+	                    data-fsc-item-path="gold" 
+	                    data-fsc-action="Update" 
+	                    type="text" 
+	                    name="quantity" 
+	                    value="1"/>
+					<!-- <input type="radio" id="gold" name="secureProduct" value="gold"> -->
+					<button data-fsc-item-path-value="gold" data-fsc-action="Add" data-fsc-item-path="gold" data-fsc-item-selection-smartdisplay-inverse>
+						Add to Cart
+					</button>
+
+					<button data-fsc-item-path-value="gold" data-fsc-action="Checkout" data-fsc-item-path="gold" data-fsc-item-selection-smartdisplay>
+						Buy
+					</button>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+</html>

@@ -39,7 +39,7 @@ function fsSecure() {
 	}
 	// Here you would pass the discounted session to your backend for encryption,
 	// then pass the encrypted session object to FS
-	
+
 	// Pass Discounted and Encrypted Session To FS
 	fastspring.builder.secure(fsPayload);
 

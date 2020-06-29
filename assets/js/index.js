@@ -30,7 +30,8 @@ function evalLanguange(userLanguage) {
 }
 
 async function createAccount(accountInfo) {
-	let response = await fetch('https://24df0d5d.ngrok.io/api/v1/accounts', {
+	// let response = await fetch('https://24df0d5d.ngrok.io/api/v1/accounts', {
+	let response = await fetch('https://fs-coupon-middleware.herokuapp.com/api/v1/accounts', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -43,7 +44,8 @@ async function createAccount(accountInfo) {
 }
 
 async function createSession(sessionPayload) {
-		let response = await fetch('https://24df0d5d.ngrok.io/api/v1/sessions', {
+		// let response = await fetch('https://24df0d5d.ngrok.io/api/v1/sessions', {
+		let response = await fetch('https://fs-coupon-middleware.herokuapp.com/api/v1/sessions', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -89,6 +91,7 @@ async function buildFS() {
 
 	// Call to Get FS Account ID
 	accountId = await createAccount(accountPayload);
+	console.log("Account ID: ", accountId);
 
 
 	// Apply Coupon if correct
@@ -110,7 +113,7 @@ async function buildFS() {
 	// Send session to FS
 	sessionId = await createSession(sessionPayload);
 
-	
+	console.log("Session ID: ", sessionId);
 	// Send session ID to checkout
 	fastspring.builder.checkout(sessionId);
 }

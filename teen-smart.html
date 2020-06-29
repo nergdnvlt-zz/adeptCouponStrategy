@@ -1,0 +1,733 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+<html>
+
+<head>
+
+    <base href="https://shop.adeptdriver.com/">
+
+    <title>TEEN DRIVERS-adept</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <!-- <link rel="canonical" href="https://shop.adeptdriver.com/TEEN-DRIVERS/products/1/"> -->
+    <!-- <link rel="alternate" media="only screen and (max-width: 640px)" href="https://shop.adeptdriver.com/mobile/TEEN-DRIVERS/products/1/" /> -->
+
+    <link rel="stylesheet" href="text/sidenav.css" type="text/css">
+    <link rel="stylesheet" href="text/storestyle.css" type="text/css">
+    <link rel="stylesheet" href="text/footernav.css" type="text/css">
+
+    <link rel="stylesheet" href="text/design1.css" type="text/css">
+    <link rel="stylesheet" href="text/topnav1.css" type="text/css">
+
+
+    <!-- jQuery CDN -->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+        crossorigin="anonymous">
+    </script>
+
+
+    <!-- SBL -->
+    <script
+        id="fsc-api"
+        src="https://d1f8f9xcsvx3ha.cloudfront.net/sbl/0.8.3/fastspring-builder.min.js"
+        type="text/javascript"
+        data-storefront="mfdemos.test.onfastspring.com/popup-adept"
+        data-access-key="QELBPKWQQ5OYYMTLBGVQQG"
+        data-popup-closed="popupClosed"
+        data-data-callback="dataCallback"
+        data-continuous="true">
+    </script>
+
+        <!-- RESET FOR DEMO PURPOSES -->
+    <script type="text/javascript">
+        fastspring.builder.reset();
+    </script>
+
+    <base href="https://shop.adeptdriver.com/">
+
+
+    <!-- COUPON EVAL -->
+    <!-- NOTE: The following code should mostly be done through API -->
+    <!-- 1. Pass the discount through a fetch call to your backend -->
+    <!-- 2. Build the payload with the discount on the backend -->
+    <!-- 3. Encrypt it -->
+    <!-- 4. Pass the encrypted payload with key back to client side -->
+    <!-- 5. Pass that to the secure call -->
+    <script type="text/javascript">
+        function eval(couponCode) {
+            let discount = "";
+            if (couponCode === "ALLST") {
+                discount = {
+                    "download": 60,
+                    "online": 60,
+                    "additional": 50
+                }
+            } else if (couponCode === "STFARM") {
+                discount = {
+                    "download": 50,
+                    "online": 55,
+                    "additional": 40
+                }
+            }
+
+            return discount;
+        }
+
+        function submitCoupon() {
+            let fsPayload = "";
+            let secureDiscount = "";
+
+            let secureCoupon = document.getElementById('secureCouponInput').value.toUpperCase();
+
+            secureDiscount = eval(secureCoupon);
+
+            fsPayload = {
+                "items": 
+                    [
+                        {
+                            "product": "0250-00-0401",
+                            "quantity": 0,
+                            "pricing": {
+                                "quantityDiscounts": {
+                                    "1": {
+                                      "USD": secureDiscount.download
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "product": "0250-00-0400",
+                            "quantity": 0,
+                            "pricing": {
+                                "quantityDiscounts": {
+                                    "1": {
+                                      "USD": secureDiscount.online
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "product": "0250-00-0402",
+                            "quantity": 0,
+                            "pricing": {
+                                "quantityDiscounts": {
+                                    "1": {
+                                      "USD": secureDiscount.additional
+                                    }
+                                }
+                            }
+                        }
+                    ]
+            }
+            // Here you would pass the discounted session to your backend for encryption,
+            // then pass the encrypted session object to FS
+            
+            // Pass Discounted and Encrypted Session To FS
+            if (secureCoupon !== "") {
+                fastspring.builder.secure(fsPayload);
+            } else {
+                alert('Wrong coupon code');
+            }
+        }
+    </script>
+</head>
+
+<Body bgcolor="#ffffff" style="margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">
+
+
+
+    <div id="container">
+        <div id="header" class="topnav1bgcolor">
+
+            <div class="divheadercontent">
+                <div class="divrightarea">
+
+                    <div class="top-pane">
+                        <div class="holder">
+                            <ul class="vcard">
+                                <li><a href="https://shop.adeptdriver.com/">Store Home</a></li>
+
+                                <li><a href="https://www.adeptdriver.com/product-support/" target="_blank">Support</a></li>
+                                <li><a href="https://www.adeptdriver.com/contact/" target="_blank">Contact Us</a></li>
+
+                                <li class="tel">877-233-7879</li>
+ 
+                                <li class="cart"><a href="basket.asp">View Cart</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--</form>-->
+        </div>
+        <div class="inner">
+            <span style="float: left; padding: 10px; padding-top: 11px"><a href="http://www.teensmartdriving.com/"  title="teenSMARTDriving" target="_blank"><img src="../design/images/logo.gif" width="230" height="38" alt="teenSMART" /></a></span>
+
+
+            <div id="main">
+
+
+
+
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+
+                        <td width="191" class="sidenavbg" valign="top">
+                            <div id="sidebar" style="width:191px;">
+                                <ul class="account-info">
+                                    <li><a class="sidenav2" title="View Cart" href="https://shop.adeptdriver.com/basket.asp">View Cart</a></li>
+                                    <li><a class="sidenav2" title="Account Info" href="https://shop.adeptdriver.com/statuslogin.asp">Account Info</a></li>
+                                    <li><a class="sidenav2" title="Request Catalog" href="https://shop.adeptdriver.com/inforequest.asp">Request Catalog</a></li>
+                                </ul>
+
+
+
+                            </div>
+                        </td>
+                        <td valign="top" class="pagenavbg">
+
+                            <!-- sl code goes here -->
+                            <div id="page-content">
+                                <div class="heading" style="width:100%">
+
+                                    <!-- check for discount code -->
+
+                                    <div class="heading" style="width:100%; padding: 10px 0px 10px 4px;">
+                                        <div class="keyword" style="width:97%;">
+                                            <div style="display:table; width:100%; cellpadding:4;">
+                                                <!-- <form id="checksourcekeyform" method="post" action="checksourcekeyprod.asp"> -->
+                                                    <div style="display:table-row;">
+                                                        <div style="display:table-cell; width:75%; text-align:center;">
+                                                            <span class="plaintextbold big_bold" style="text-align:center;">
+                    					
+                            If you have a discount code enter it and click "Submit". Any applicable discounts will be reflected below.
+                        	<br>
+                            
+
+                            <input id="secureCouponInput" style="font-size:18px" type="text" size="16" maxlength="9">
+                            <button style="height:26px; width:60px; vertical-align: top;" onclick="submitCoupon();">
+                                Submit
+                            </button>
+
+
+
+                            <br>
+                        
+                    </span>
+                                                        </div>
+                                                    </div>
+                                                <!-- </form> -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- End check for discount code -->
+
+                                </div>
+                                <table width="100%" border="0" cellpadding="3" cellspacing="0">
+                                    <tr>
+                                        <td class="breadcrumbrow"><a href="default.asp" class="breadcrumb">Home</a>&nbsp;&nbsp;&#47;&nbsp;&nbsp;
+                                            <a title="TEEN DRIVERS" class="breadcrumb" href="TEEN-DRIVERS/products/1/">TEEN DRIVERS</a>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                                <br>
+                                <table width="100%" border="0" cellspacing="1" cellpadding="3" class="list">
+
+                                    <tr>
+                                        <td class="tdRow1Color" valign="middle" align="center">
+                                            <div class="prodthumb">
+                                                <div class="prodthumbcell" style="text-align: center;">
+                                                    <a href="https://shop.adeptdriver.com/teenSMART-Software-DOWNLOAD-1-User-License/productinfo/0250%2D00%2D0401/">
+                                                       
+                                                       
+                                                        <!-- OLD IMAGE -->
+                                                        <!-- <img SRC="images/Download_100.png" alt="teenSMART Software (DOWNLOAD) + 1 User License" title="teenSMART Software (DOWNLOAD) + 1 User License" class="prodlistimg"  border="0"> -->
+
+                                                        
+
+                                                        <!-- Image from SBL -->
+                                                         <img data-fsc-item-path="0250-00-0401" data-fsc-item-image>
+
+
+
+
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="tdRow1Color" valign="top">
+                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                <tr>
+                                                    <td align="left"><img src="images/clear.gif" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+
+
+                                                        <!-- OLD TITLE -->
+<!--                                                    <a title="teenSMART Software (DOWNLOAD) + 1 User License" class="producttitlelink" href="https://shop.adeptdriver.com/teenSMART-Software-DOWNLOAD-1-User-License/productinfo/0250%2D00%2D0401/">teenSMART Software (DOWNLOAD) + 1 User License
+                                                        </a> -->
+
+                                                       
+
+
+                                                        <!-- Title from SBL -->
+                                                        <span class="producttitlelink" data-fsc-item-path="0250-00-0401" data-fsc-item-display></span>
+
+                                                    
+
+
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="plaintext proddesc">
+                                                        <FONT color=#000000>
+                                                            <STRONG>GET IT FASTER! NO SHIPPING!</STRONG>
+                                                            <BR>Windows 7, 8 or 10 / Mac OSX 10.9 or newer</FONT>
+                                                        <BR>
+                                                        <div id=SpeedTestBlock style="display:none;">
+                                                            <STRONG><U>To estimate your download time, we are testing the speed of your Internet connection.</U>
+<BR>
+<table id="Speedtest" style="margin-right: auto; margin-left: auto;" border="0" cellpadding="4">
+<tbody>
+<tr>
+<td align="right">TESTED SPEED:</td>
+<td id="MBps" align="left"><font color  = "F7A400" size = "4"><strong>...DETECTING...</strong>
+                                                            </font>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right">ESTIMATED TIME TO DOWNLOAD:</td>
+                                                    <td id="DLMin" align="left">
+                                                        <font color="F7A400" size="4"><strong>...DETECTING...</strong></font>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            </div>
+                                            <script type="text/javascript">
+                                                // <![CDATA[
+                                                if(window.location.href.indexOf("mobile") < 0) 
+                                                    {
+                                                
+                                                var sBlock	= document.getElementById('SpeedTestBlock');
+                                                	sBlock.style.display = 'block';
+                                                	
+                                                var imageAddr = "http://datafiles.teensmartdriving.com/speedtest/teensmartlogo-4500.bmp" + "?n=" + Math.random();
+                                                var startTime, endTime;
+                                                var downloadSize = 10057554;
+                                                var download = new Image();
+                                                var fullSize = 2510000000
+                                                download.onload = function () {
+                                                    endTime = (new Date()).getTime();
+                                                    showResults();
+                                                }
+                                                startTime = (new Date()).getTime();
+                                                download.src = imageAddr;
+                                                
+                                                function showResults() {
+                                                    var duration = (endTime - startTime) / 1000;
+                                                    var bitsLoaded = downloadSize;
+                                                    var speedBps = (bitsLoaded / duration).toFixed(4);
+                                                    var speedMinToDL = (fullSize / speedBps / 60).toFixed(0);
+                                                    var speedMinToDLLow = (fullSize / speedBps / 60 * .7).toFixed(0);
+                                                    var speedMinToDLHigh = (fullSize / speedBps / 60 * 1.1).toFixed(0);
+                                                    var speedKbps = (speedBps / 1000).toFixed(2);
+                                                    var speedMbps = (speedBps / 1024 / 1024).toFixed(2);
+                                                    var speedtest = document.getElementById('Speedtest');
+                                                      speedtest.rows[0].cells[1].innerHTML = "<font color = red>  " + speedKbps + " KB/s</font>";
+                                                      speedtest.rows[1].cells[1].innerHTML = "<font color = red>  " + speedMinToDLLow + " - " + speedMinToDLHigh + " MINUTES</font>";
+                                                }
+                                                }
+                                                // ]]>
+                                            </script>
+                                            </STRONG>
+                                        </td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td class="plaintext">
+
+                                            <strong>Delivery Method: </strong>Email
+
+                                        </td>
+                                    </tr>
+
+
+
+                                </table>
+
+                        </td>
+                        <td class="tdRow1Color" align="center" valign="middle"><span class="ProductPrice">Unit Price:</span>
+
+                            <!-- OLD PRICING -->
+                            <!-- <form enctype="application/x-www-form-urlencoded" method="post" action="itemadd.asp"> -->
+                                <!-- <span class="ProductPrice">$119.95</span> -->
+                            <!-- </form> -->
+
+
+
+                            <!-- PRICING FROM SBL with Strikethrough -->
+                            <br>
+                            <strike data-fsc-item-path="0250-00-0401" data-fsc-item-price  data-fsc-smartdisplay></strike>
+                            <span data-fsc-item-path="0250-00-0401" data-fsc-item-unitPrice ></span>
+
+                            <br><br>
+                            
+                            <input
+                                style="width:80px;"
+                                data-fsc-autoapply 
+                                data-fsc-item-quantity-value 
+                                data-fsc-item-quantity 
+                                data-fsc-item-path-value="0250-00-0401"
+                                data-fsc-item-path="0250-00-0401" 
+                                data-fsc-action="Update" 
+                                type="text" 
+                                name="quantity" 
+                                value="1"/>
+
+                            <br>
+
+                            <button style="height:26px; width:82px; vertical-align: top; margin-top:5px;" data-fsc-item-path-value="0250-00-0401" data-fsc-action="Add" data-fsc-item-path="0250-00-0401" data-fsc-item-selection-smartdisplay-inverse>
+                                Add to Cart
+                            </button>
+
+                            <button style="height:26px; width:82px; vertical-align: top; margin-top:5px;" data-fsc-item-path-value="0250-00-0401" data-fsc-action="Checkout" data-fsc-item-path="0250-00-0401" data-fsc-item-selection-smartdisplay>
+                                Buy
+                            </button>
+
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td class="tdRow2Color" valign="middle" align="center">
+                            <div class="prodthumb">
+                                <div class="prodthumbcell" style="text-align: center;">
+                                    <a href="https://shop.adeptdriver.com/teenSMART-Software-DVD-ROM-1-User-License/productinfo/0250%2D00%2D0403/">
+
+
+                                        <!-- OLD IMAGE -->
+                                        <!-- <img SRC="images/DVD_100.png" alt="teenSMART Software (DVD-ROM) + 1 User License" title="teenSMART Software (DVD-ROM) + 1 User License" class="prodlistimg"  border="0"> -->
+
+                                        <!-- Image from SBL -->
+                                        <img data-fsc-item-path="0250-00-0400" data-fsc-item-image>
+
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="tdRow2Color" valign="top">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td align="left"><img src="images/clear.gif" /></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        
+                                        <!-- OLD TITLE -->
+                        <!--                 <a title="teenSMART Software (DVD-ROM) + 1 User License" class="producttitlelink" href="https://shop.adeptdriver.com/teenSMART-Software-DVD-ROM-1-User-License/productinfo/0250%2D00%2D0403/">
+                                            teenSMART Software (DVD-ROM) + 1 User License
+                                        </a> -->
+
+
+
+                                        <!-- TITLE FROM SBL -->
+                                        <span class="producttitlelink" data-fsc-item-path="0250-00-0400" data-fsc-item-display></span>
+
+
+
+
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="plaintext proddesc">
+                                        <FONT color=#000000>
+                                            <STRONG>Runs on Chromebooks, Windows / Mac desktops & laptops</STRONG>
+                                            <br>Browser recommendation here
+                                            <!-- <STRONG>SHIPPING FEE WILL BE ADDED TO PRICE</STRONG> -->
+                                            <!-- <BR>Windows 7, 8 or 10 / Mac OSX 10.9 or newer -->
+                                    </td>
+                                </tr>
+
+
+
+                                <tr>
+                                    <td class="plaintext">
+
+                                        <!-- <strong>Delivery Method: </strong>USPS Priority Mail -->
+
+                                    </td>
+                                </tr>
+
+
+
+
+                            </table>
+
+                        </td>
+                        <td class="tdRow2Color" align="center" valign="middle"><span class="ProductPrice">Unit Price:</span>
+                            
+
+                            <!-- OLD PRICING -->
+                            <!-- <form enctype="application/x-www-form-urlencoded" method="post" action="itemadd.asp"> -->
+                                <!-- <span class="ProductPrice">$119.95</span> -->
+                            <!-- </form> -->
+
+                            
+
+                            <!-- PRICING FROM SBL with Strikethrough -->
+                            <br>
+                            <strike data-fsc-item-path="0250-00-0400" data-fsc-item-price  data-fsc-smartdisplay></strike>
+                            <span data-fsc-item-path="0250-00-0400" data-fsc-item-unitPrice ></span>
+                        
+                            <br><br>
+                            
+                            <input
+                                style="width:80px;"
+                                data-fsc-autoapply 
+                                data-fsc-item-quantity-value 
+                                data-fsc-item-quantity 
+                                data-fsc-item-path-value="0250-00-0400"
+                                data-fsc-item-path="0250-00-0400" 
+                                data-fsc-action="Update" 
+                                type="text" 
+                                name="quantity" 
+                                value="1"/>
+
+                            <br>
+
+                            <button style="height:26px; width:82px; vertical-align: top; margin-top:5px;" data-fsc-item-path-value="0250-00-0400" data-fsc-action="Add" data-fsc-item-path="0250-00-0400" data-fsc-item-selection-smartdisplay-inverse>
+                                Add to Cart
+                            </button>
+
+                            <button style="height:26px; width:82px; vertical-align: top; margin-top:5px;" data-fsc-item-path-value="0250-00-0400" data-fsc-action="Checkout" data-fsc-item-path="0250-00-0400" data-fsc-item-selection-smartdisplay>
+                                Buy
+                            </button>
+
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td class="tdRow1Color" valign="middle" align="center">
+                            <div class="prodthumb">
+                                <div class="prodthumbcell" style="text-align: center;">
+
+                                    <a href="https://shop.adeptdriver.com/teenSMART-Additional-User-License/productinfo/0250%2D00%2D0402/">
+                                        <!-- OLD IMAGE -->
+                                        <!-- <img SRC="images/AddUser_100.png" alt="teenSMART Additional User License" title="teenSMART Additional User License" class="prodlistimg"  border="0"> -->
+
+                                        
+                                        <!-- Image from SBL -->
+                                        <img data-fsc-item-path="0250-00-0402" data-fsc-item-image>
+
+
+
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="tdRow1Color" valign="top">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <td align="left"><img src="images/clear.gif" /></td>
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                        <!-- OLD TITLE -->
+                                        <!--     <a title="teenSMART Additional User License" class="producttitlelink" href="https://shop.adeptdriver.com/teenSMART-Additional-User-License/productinfo/0250%2D00%2D0402/">teenSMART Additional User License</a> -->
+
+                                        <!-- TITLE FROM SBL -->
+                                        <span class="producttitlelink" data-fsc-item-path="0250-00-0402" data-fsc-item-display></span>
+
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="plaintext proddesc">
+                                        <FONT color="red">
+                                            <STRONG>PROGRAM SOFTWARE NOT INCLUDED</FONT></STRONG>
+                                    </td>
+                                </tr>
+
+
+
+                                <tr>
+                                    <td class="plaintext">
+
+                                        <strong>Delivery Method: </strong>Email
+
+                                    </td>
+                                </tr>
+
+
+
+                            </table>
+
+                        </td>
+                        <td class="tdRow1Color" align="center" valign="middle"><span class="ProductPrice">Unit Price:</span>
+                            
+                            <!-- OLD PRICING -->
+                            <!-- <form enctype="application/x-www-form-urlencoded" method="post" action="itemadd.asp"> -->
+                                <!-- <span class="ProductPrice">$99.95</span> -->
+                            <!-- </form> -->
+
+
+                            <!-- PRICING FROM SBL with Strikethrough -->
+                            <br>
+                            <strike data-fsc-item-path="0250-00-0402" data-fsc-item-price  data-fsc-smartdisplay></strike>
+                            <span data-fsc-item-path="0250-00-0402" data-fsc-item-unitPrice ></span>
+
+
+                            <br><br>
+                            
+                            <input
+                                style="width:80px;"
+                                data-fsc-autoapply 
+                                data-fsc-item-quantity-value 
+                                data-fsc-item-quantity 
+                                data-fsc-item-path-value="0250-00-0402"
+                                data-fsc-item-path="0250-00-0402" 
+                                data-fsc-action="Update" 
+                                type="text" 
+                                name="quantity" 
+                                value="1"/>
+
+                            <br>
+
+                            <button style="height:26px; width:82px; vertical-align: top; margin-top:5px;" data-fsc-item-path-value="0250-00-0402" data-fsc-action="Add" data-fsc-item-path="0250-00-0402" data-fsc-item-selection-smartdisplay-inverse>
+                                Add to Cart
+                            </button>
+
+                            <button style="height:26px; width:82px; vertical-align: top; margin-top:5px;" data-fsc-item-path-value="0250-00-0402" data-fsc-action="Checkout" data-fsc-item-path="0250-00-0402" data-fsc-item-selection-smartdisplay>
+                                Buy
+                            </button>
+                        </td>
+
+
+                    </tr>
+
+                </table>
+
+
+
+
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="right" class="plaintextbold"><span id="pagelinks"> 
+					
+					
+					    </span>
+                        </td>
+                        <td width="10"></td>
+                    </tr>
+                </table>
+                </div>
+                <!-- end sl_code here -->
+                </td>
+
+                </tr>
+
+                </table>
+
+            </div>
+            <!-- Closes main  -->
+            <div id="footer" class="footerbgcolor">
+                <div id="footerMid" class="clearfix">
+                    <div class="inner">
+                        <div class="footerCol first">
+                            <p>Many insurance providers offer product discounts and premium discounts for teenSMART drivers.
+                                <span class="footerlink"><a href="https://www.teensmartdriving.com/discounts-external/" style="text-decoration:none; color: #FF6600;" class="fancybox" data-fancybox-type="iframe">Learn more &gt;&gt;</a></span></p>
+                        </div>
+                        <div class="footerCol">
+                            <table border="0" cellpadding="1" cellspacing="0" width="100%">
+                                <tr>
+                                    <td width="5%" style="vertical-align:middle;">
+                                        <center></center>
+                                    </td>
+                                    <td width="30%" style="vertical-align:middle;">
+                                        <center>
+                                            <script type="text/javascript" src="https://sealserver.trustwave.com/seal.js?style=invert&code=6e15888c64614dd59d9f368cf9306aab"></script>
+                                        </center>
+                                    </td>
+                                    <td width="30%" style="vertical-align:middle;">
+                                        <center><a title="ADEPT Driver BBB Business Review" target="_blank" href="https://www.bbb.org/northeast-california/business-reviews/computer-software-publishers-and-developers/adept-driver-in-elk-grove-ca-47043002/#bbbonlineclick"><img src="https://seal-necal.bbb.org/seals/blue-seal-63-134-adept-driver-47043002.png" alt="ADEPT Driver BBB Business Review" height="100" style="border: 0;" /></a></center>
+                                    </td>
+                                    <td width="30%" style="vertical-align:middle;">
+                                        <center>
+                                            <div class="AuthorizeNetSeal" id="AuthorizeNetSeal">
+                                                <script type="text/javascript" language="javascript">
+                                                    var ANS_customer_id="4bd627b9-1990-49e8-aa46-40d19c8b6f60";
+                                                </script>
+                                                <script type="text/javascript" language="javascript" src="//verify.authorize.net/anetseal/seal.js"></script>
+                                            </div>
+                                        </center>
+                                    </td>
+                                    <td width="5%" style="vertical-align:middle;">
+                                        <center></center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="footerCol last">
+                            <ul class="soc">
+                                <li><a class="fb" href="https://www.facebook.com/pages/teenSMART/456406467719933" target="_blank">Facebook</a></li>
+                                <li><a class="tw" href="https://twitter.com/adeptdriver" target="_blank">Twitter</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end inner -->
+                </div>
+                <!-- end footerMid -->
+                <footer id="footer">
+                    <div class="inner">
+                        <nav class="block">
+
+                            <ul class="footer-nav ">
+                                <li class="first"><a href="https://www.adeptdriver.com/contact/" target="_blank">Contact</a></li>
+                                <li class="last"><a href="https://www.adeptdriver.com/product-support/" target="_blank">Support</a></li>
+                                <li class="last"><a href="https://www.adeptdriver.com/privacy-policy/" target="_blank">Privacy Policy</a></li>
+                                <li class="last"><a href="https://www.adeptdriver.com/terms-of-use/" target="_blank">Terms of Use</a></li>
+                            </ul>
+
+                        </nav>
+                        <p>Copyright &copy; 2020 ADEPT, Inc. All Rights Reserved.</p>
+                    </div>
+                </footer>
+
+
+                <link rel="stylesheet" href="/design/fancybox/jquery.fancybox.css" type="text/css">
+                <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                <script type="text/javascript" src="/design/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+                <div class="clear"></div>
+
+            </div>
+        </div>
+        <!-- Closes container  -->
+</body>
+
+</html>
